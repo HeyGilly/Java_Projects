@@ -16,8 +16,11 @@
 ## Key Features
 
 * Introduction
+* Bank Account 
+  * The user will provide the username and password then proceed to the main menu. Once in the main Menu the user will have access to see their balance, withdraw, deposit, and see previous transaction.
 
 <hr>
+
 > GitHub [@HeyGilly](https://github.com/heygilly) &nbsp;&middot;&nbsp;
 > LinkedIn [@HeyGilly](https://www.linkedin.com/in/heygilly/)
 
