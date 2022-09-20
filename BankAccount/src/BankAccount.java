@@ -45,7 +45,39 @@ public class BankAccount {
             usersInput = usersMenuChoice.next().charAt(0);
             System.out.println();
 
-
+            if (usersInput == 'a' || usersInput == 'A') {
+                //-- Showcase of Balance
+                System.out.println("......................");
+                System.out.println("Balance: " + moneyFormat.format(balance));
+                System.out.println("......................");
+                System.out.println("\n");
+            } else if (usersInput == 'b' || usersInput == 'B'){
+                //-- Enter your deposit
+                System.out.println("......................");
+                System.out.println("Enter a amount to deposit :");
+                System.out.println("......................");
+                // user's input
+                double depositAmount = usersMenuChoice.nextDouble();
+                // Calling the method for depositing the money and will update the previous transaction and balance.
+                deposit(depositAmount);
+                System.out.println("\n");
+            } else if (usersInput == 'c' || usersInput == 'C'){
+                //-- Withdraw from Account
+                System.out.println("......................");
+                System.out.println("Enter a amount to withdraw:");
+                System.out.println("......................");
+                // Capture the amount withdraw
+                double withdrawAmount = usersMenuChoice.nextDouble();
+                // Calling the method for WITHDRAWING the money and will update the previous transaction and balance.
+                withdraw(withdrawAmount);
+                System.out.println("\n");
+            } else if (usersInput == 'd' || usersInput == 'D') {
+                System.out.println("......................");
+                System.out.println("Previous Transaction:");
+                getPreviousTransaction();
+                System.out.println("......................");
+                System.out.println("\n");
+            }
         }while (!(usersInput == 'e' || usersInput == 'E'));
 
         //-- Once the application is finished you will be thanked
@@ -55,5 +87,34 @@ public class BankAccount {
     }
 
 
+    //--- Deposit method
+    void deposit(double amount){
+        if(amount != 0){
+            balance += amount;
+            previousTransaction = amount;
+        }
+    }
+    //--- Withdraw Methods
+    void withdraw(double amt){
+        if(amt != 0 && balance >= amt){
+            balance -= amt;
+            previousTransaction =- amt;
+        }
+        else if(balance < amt){
+            System.out.println("Bank balance insufficient");
+        }
+    }
 
+    //--- Previous Transaction
+    void getPreviousTransaction(){
+        if(previousTransaction > 0){
+            System.out.println("Deposited: $"+previousTransaction);
+        }
+        else if(previousTransaction < 0){
+            System.out.println("Withdrawn: "+Math.abs(previousTransaction));
+        }
+        else{
+            System.out.println("No transaction occurred");
+        }
+    }
 }
