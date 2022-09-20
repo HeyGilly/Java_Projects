@@ -15,8 +15,12 @@ public class Main {
         //-- Once approved, Run the Bank Application
 
         BankAccount AccountUser = new BankAccount(username, accountNumber);
-         System.out.println(AccountUser.Username);
-         System.out.println(AccountUser.userAccountNumber);
+        // System.out.println(AccountUser.customerUsername);
+        // System.out.println(AccountUser.customerPinCode);
+
+        //-- Run the AccountUser menu method. this will run the whole program that
+        //   will take in the username and pinNumber
+        AccountUser.menu();
 
 
     }
