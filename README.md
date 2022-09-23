@@ -13,11 +13,14 @@
 
 </div>
 
-## Key Features
-
+## Key Applications
 * Introduction
 * Bank Account 
   * The user will provide the username and password then proceed to the main menu. Once in the main Menu the user will have access to see their balance, withdraw, deposit, and see previous transaction.
+* Music Repeat
+  * The user will be asked if they would like to have teh song repeat, if not the user will enter "no" then I will play the next song.
+* Email Application
+  * Creating email account for new hires for your company. 
 
 <hr>
 
