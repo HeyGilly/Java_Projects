@@ -3,6 +3,8 @@ package EmailApp;
 import java.util.Scanner;
 
 public class Email {
+    Scanner in = new Scanner(System.in);
+
     //-- Properties
     private String firstName;
     private String lastName;
@@ -18,18 +20,17 @@ public class Email {
         System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName);
 
         // Call a method asking for the department - return the department
-        this.department = setDepartment();
+        this.department = setDepartment(in);
         System.out.println("Department: " + this.department);
     }
 
     //-- Ask for department
-        private String setDepartment(){
+        private String setDepartment(Scanner in){
             System.out.println();
             System.out.println("****************************");
             System.out.println("DEPARTMENT CODE");
             System.out.println(" 1) for Sales\n 2) for Development\n 3) for Accounting\n 0) for none");
             System.out.println("Enter the department code:");
-            Scanner in = new Scanner(System.in);
             int depChoice = in.nextInt();
             String userDepartment = "";
             //-- Switch Conditional
@@ -44,8 +45,7 @@ public class Email {
             }else{
                 System.out.println();
                 System.out.println("Please insert the proper department!!!");
-                in.close();
-                setDepartment();
+                setDepartment(in);
             }
             return userDepartment;
         }
