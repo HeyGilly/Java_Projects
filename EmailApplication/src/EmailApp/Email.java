@@ -1,5 +1,6 @@
 package EmailApp;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Email {
@@ -10,9 +11,11 @@ public class Email {
     private String lastName;
     private String password;
     private String department;
+    private String email;
     private int mailboxCapacity;
     private int defaultPasswordLength = 8;
     private String alternateEmail;
+    private String companySuffix = "company.com";
 
     //-- Constructor to receive the first name and last name
     public Email(String firstName, String lastName) {
@@ -29,6 +32,9 @@ public class Email {
         // showcase the password for user
         System.out.println("Your password is: "+ this.password);
 
+        //-- Combined elements to generate email
+        email = firstName.toLowerCase() + "."+ lastName.toLowerCase()+"@"+department+companySuffix;
+        System.out.println("Your email is: "+email);
     }
 
     //-- Ask for department
@@ -42,11 +48,11 @@ public class Email {
             String userDepartment = "";
             //-- Switch Conditional
             if(depChoice == 1){
-                userDepartment = "Sales";
+                userDepartment = "sales.";
             }else if (depChoice == 2){
-                userDepartment = "Development";
+                userDepartment = "development.";
             }else if (depChoice == 3){
-                userDepartment = "Accounting";
+                userDepartment = "accounting.";
             } else if (depChoice == 0){
                 userDepartment = "";
             }else{
