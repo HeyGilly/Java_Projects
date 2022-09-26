@@ -12,7 +12,7 @@ public class Email {
     private String password;
     private String department;
     private String email;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private int defaultPasswordLength = 8;
     private String alternateEmail;
     private String companySuffix = "company.com";
@@ -80,8 +80,33 @@ public class Email {
     }
 
     //--- Set the mailbox capacity
-
+        public void setMailboxCapacity(int capacity){
+            this.mailboxCapacity = capacity;
+        }
     //-- set the alternate email
+        public void setAlternateEmail(String altEmail){
+            this.alternateEmail = altEmail;
+        }
 
     //-- Change the password
+        public void changePassword(String password){
+            this.password = password;
+        }
+
+        //-- Get for Mailbox Capacity
+    public int getMailboxCapacity() {
+        return mailboxCapacity;
+    }
+
+    //-- Get for alternative email
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
+    //-- getter for public string
+    public String getPassword() {
+        return password;
+    }
+
+
+
 }
