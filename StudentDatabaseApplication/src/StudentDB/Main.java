@@ -20,5 +20,18 @@ Your application should do the following:
  */
 
 
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //-- Ask the user how many new students will be added
+        System.out.println("***************");
+        System.out.println("How many new students are enrolled this semester?");
+        int studentCount = sc.nextInt();
+
+
+
+    }
 }
