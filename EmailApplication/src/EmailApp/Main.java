@@ -24,7 +24,6 @@ public class Main {
 
         Email userEmail = new Email(firstName,lastName);
 
-        userEmail.setAlternateEmail("alternativeEmail@gmail.com");
-
+        System.out.println(userEmail.showInfo());
     }
 }
