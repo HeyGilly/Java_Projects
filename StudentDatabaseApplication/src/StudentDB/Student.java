@@ -1,16 +1,17 @@
 package StudentDB;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Student {
-    private String firstName;
-    private String lastName;
-    private int userInput;
+    private final String firstName;
+    private final String lastName;
+    private final int userInput;
     private int gradeYear;
     private String studentID;
-    private String courses;
+    private String courses = null;
     private String tuitionBalance;
-    private static int costOfCourse = 600;
+    private static final int costOfCourse = 600;
     private static int id = 5000;
 
     //-- Constructor: Prompt the user to enter the Students name and current year.
@@ -53,7 +54,26 @@ public class Student {
             // GradeLevel + ID
             this.studentID = userInput + "" + id;
         }
+
     //-- Enroll in courses
+    public void enroll(){
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Enter course to enroll (Q to quit):");
+            String course = sc.nextLine();
+            if (!Objects.equals(course, "Q")){
+                courses = courses + "\n" + course;
+                tuitionBalance = tuitionBalance + costOfCourse;
+            }else{
+                break;
+            }
+        }while (true);
+
+        System.out.println("Enrolled in: "+courses);
+        System.out.println("Tuition Balance: "+tuitionBalance);
+
+
+    }
 
     //-- View Balance
 
