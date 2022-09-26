@@ -21,6 +21,9 @@
   * The user will be asked if they would like to have teh song repeat, if not the user will enter "no" then I will play the next song.
 * Email Application
   * Creating email account for new hires for your company. 
+* Student Database Application
+  * Creating a application to manage studnet enrollments and balance.
+
 
 <hr>
 
