@@ -22,7 +22,9 @@
 * Email Application
   * Creating email account for new hires for your company. 
 * Student Database Application
-  * Creating a application to manage studnet enrollments and balance.
+  * Creating an application to manage student enrollments and balance.
+* Gross Calculator
+  * Ask the user for hours work per week and pay per hour, Once the input is put in the formula displays the amount. 
 
 
 <hr>
