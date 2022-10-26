@@ -32,6 +32,8 @@ public class FillInTheBlank {
         System.out.println("Enter a verb ending in 'ING':");
         String verbEndingInING_03 = sc.next();
 
+        sc.close();
+
         System.out.println("******************************");
         System.out.println();
 
