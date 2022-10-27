@@ -25,7 +25,8 @@
   * Creating an application to manage student enrollments and balance.
 * Gross Calculator
   * Ask the user for hours work per week and pay per hour, Once the input is put in the formula displays the amount. 
-
+* Mad Libs
+  * Creating a full story by asking the user to input words. 
 
 <hr>
 
