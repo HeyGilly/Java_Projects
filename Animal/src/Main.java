@@ -7,6 +7,8 @@ public class Main {
         rocky.fetch();
         rocky.makeSound();
 
+        feed(rocky);
+
         // polymorphism
         // Sasha is a type of animal but an instance of a Dog
         Animal sasha = new Dog();
@@ -24,5 +26,17 @@ public class Main {
         // in this specific call it will make sasha into a cat type so we can execute the scratch method
         ((Cat)sasha).scratch();
 
+        feed(sasha);
+
     }
+
+    public static void feed(Animal animal){
+        if (animal instanceof Dog)
+            System.out.println("heres the DOG food");
+        else if (animal instanceof Cat)
+            System.out.println("Here is the CAT food");
+    }
+
+
+
 }
