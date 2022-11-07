@@ -24,12 +24,18 @@ public class Main {
             char lastChar = chars[chars.length-1];
             System.out.println(lastChar);
 
-            String sub = welcome.substring(10);
+            if(chars.length < 10){
+                throw (new Exception("My custom message"));
+            }
 
+            String sub = welcome.substring(10);
+            System.out.println("Substring: " + sub);
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Array index problem");
         }catch (StringIndexOutOfBoundsException e){
             System.out.println("string Index Problem!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 
 
