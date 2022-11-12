@@ -99,6 +99,53 @@ public class Sets {
         D1.retainAll(D2);
         System.out.println("After intersection: "+ D1);
 
+        System.out.println("****************************");
+
+        ArrayList <String> animal = new ArrayList<>();
+        animal.add("Crocodile");
+
+        System.out.println("Animal list: " + animal);
+
+        ArrayList<String> mammal = new ArrayList<>();
+        mammal.add("Elephant");
+        mammal.add("Dog");
+
+        System.out.println("Mammel list: " + mammal);
+
+        animal.addAll(mammal);
+
+        System.out.println("New animal list: " + animal);
+
+        System.out.println(animal.get(2));
+
+        for (String i : animal){
+            System.out.println(i);
+        }
+
+        animal.set(1,"monkey");
+
+        System.out.println("New animal set: " + animal);
+
+        animal.add("Bumble Bee");
+        animal.add("Camel");
+        animal.add("Hippo");
+        animal.add("Kangaroo");
+
+        System.out.println("New list of animal: " +animal);
+
+        String[] newArrayAnimal = new String[animal.size()];
+
+        animal.toArray(newArrayAnimal);
+
+        System.out.println("Array: ");
+        for (String i : newArrayAnimal){
+            System.out.print(i + " ");
+        }
+
+        ArrayList<String> backToArrayList = new ArrayList<>(Arrays.asList(newArrayAnimal));
+
+        System.out.println("ArrayList: "+ backToArrayList);
+
 
     }
 }
