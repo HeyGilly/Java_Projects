@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Sets {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         Set fruits = new HashSet();
         fruits.add("apple");
