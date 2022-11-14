@@ -39,7 +39,22 @@ public class TestResults {
 
 
     public static void main(String[] args) {
+        //Access the Map to get the elements (key:value) of each students
 
+        Map<String, Integer> gradebook = getOriginalGrades();
+        Map<String, Integer> makeupGrades = getMakeUpGrades();
+
+        //used the lambda expression
+        gradebook.forEach( (student, originalGrade) -> {
+            // access the other map to get the students second grade
+            // and add it to a variable
+            Integer makeupGrade = makeupGrades.get(student);
+            //Compare the makeup Grade with the original grade
+            if(makeupGrade > originalGrade)
+                gradebook.put(student, makeupGrade);
+
+            System.out.println(student + ": " + gradebook.get(student));
+        });
     }
 
 
